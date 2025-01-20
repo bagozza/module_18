@@ -1,0 +1,18 @@
+{% extends 'menu.html' %}
+
+{% block pagename %}
+    {{ block.super }}
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <ul>
+        <li>Civilization V</li><button>Купить!</button>
+        <li>Cyberpunk2077</li><button>Купить!</button>
+        <li>Counter-Strike 2</li><button>Купить!</button>
+        <a href="http://127.0.0.1:8000/"> <button>Вернуться обратно</button></a>
+    </ul>
+{% endblock %}

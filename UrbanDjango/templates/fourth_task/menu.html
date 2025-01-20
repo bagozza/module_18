@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+            {% if request.path == '/' %}
+                <h1>Главная страница</h1>
+            {% elif request.path == '/games/' %}
+                <h1>Игры</h1>
+            {% elif request.path == '/cart/' %}
+                <h1>Корзина</h1>
+            {% else %}
+                <h1>НЕИЗВЕСТНАЯ СТРАНИЦА</h1>
+            {% endif %}
+        {% endblock %}
+    </header>
+    <nav>
+        {% block menu %}
+            <a href="#">Главная</a><br/>
+            <a href="http://127.0.0.1:8000/games/">Магазин</a><br/>
+            <a href="http://127.0.0.1:8000/cart/">Карзина</a><br/>
+        {% endblock %}
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
